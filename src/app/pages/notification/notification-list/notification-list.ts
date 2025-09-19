@@ -1,10 +1,20 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { FirestoreModule } from '@angular/fire/firestore';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-notification-list',
-  imports: [],
+  standalone: true,
+  imports: [
+    CommonModule,
+    FormsModule,
+    RouterModule,
+    FirestoreModule
+  ],
   templateUrl: './notification-list.html',
-  styleUrl: './notification-list.scss'
+  styleUrls: ['./notification-list.scss']
 })
 export class NotificationList {
 

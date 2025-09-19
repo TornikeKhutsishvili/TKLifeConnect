@@ -1,10 +1,20 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { FirestoreModule } from '@angular/fire/firestore';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-register',
-  imports: [],
+  standalone: true,
+  imports: [
+    CommonModule,
+    FormsModule,
+    RouterModule,
+    FirestoreModule
+  ],
   templateUrl: './register.html',
-  styleUrl: './register.scss'
+  styleUrls: ['./register.scss']
 })
 export class Register {
 
