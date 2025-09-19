@@ -12,6 +12,7 @@ import {
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { FirebaseService } from './core/services/firebase-service';
+import { FirestoreModule } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-root',
@@ -21,7 +22,7 @@ import { FirebaseService } from './core/services/firebase-service';
     FormsModule,
     RouterOutlet,
     RouterModule,
-    // FirestoreModule,
+    FirestoreModule,
   ],
   templateUrl: './app.html',
   styleUrls: ['./app.scss']
@@ -32,8 +33,8 @@ export class App implements OnInit {
   private firebaseService = inject(FirebaseService);
 
   ngOnInit() {
-    // console.log(this.firebaseService.auth);
-    // console.log(this.firebaseService.db);
+    console.log(this.firebaseService.auth);
+    console.log(this.firebaseService.db);
   }
 
 }

@@ -4,20 +4,20 @@ import {
   provideZonelessChangeDetection
 } from '@angular/core';
 
-// import {
-//   initializeApp,
-//   provideFirebaseApp
-// } from '@angular/fire/app';
+import {
+  initializeApp,
+  provideFirebaseApp
+} from '@angular/fire/app';
 
-// import {
-//   getFirestore,
-//   provideFirestore
-// } from '@angular/fire/firestore';
+import {
+  getFirestore,
+  provideFirestore
+} from '@angular/fire/firestore';
 
-// import {
-//   getAuth,
-//   provideAuth
-// } from '@angular/fire/auth';
+import {
+  getAuth,
+  provideAuth
+} from '@angular/fire/auth';
 
 import {
   provideClientHydration,
@@ -34,7 +34,6 @@ import { routes } from './app.routes';
 import { firebaseConfig } from '../environments';
 
 
-
 export const appConfig: ApplicationConfig = {
 
   providers: [
@@ -43,9 +42,9 @@ export const appConfig: ApplicationConfig = {
     provideZonelessChangeDetection(),
     provideRouter(routes),
     provideClientHydration(withEventReplay()),
-    // provideFirebaseApp(() => initializeApp(firebaseConfig)),
-    // provideAuth(() => getAuth()),
-    // provideFirestore(() => getFirestore()),
+    provideFirebaseApp(() => initializeApp(firebaseConfig)),
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore()),
   ]
 
 };
